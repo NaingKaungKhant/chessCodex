@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tournament Focus Chess</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="match-header">
+        <div class="brand-lockup">
+          <div class="brand-mark">C</div>
+          <div>
+            <p class="eyebrow">Tournament Focus</p>
+            <h1>ML Chess Arena</h1>
+          </div>
+        </div>
+
+        <div class="match-actions">
+          <label class="control-field">
+            Difficulty
+            <select id="difficultySelect">
+              <option value="1">Beginner</option>
+              <option value="2" selected>Club</option>
+              <option value="3">Expert</option>
+            </select>
+          </label>
+          <label class="control-field">
+            Play as
+            <select id="sideSelect">
+              <option value="w" selected>White</option>
+              <option value="b">Black</option>
+            </select>
+          </label>
+          <button class="icon-button" id="newGameButton" type="button">New Game</button>
+        </div>
+      </header>
+
+      <section class="game-layout" aria-label="Playable chess game">
+        <aside class="clock-column">
+          <section class="clock-card dark-player" id="blackClockCard">
+            <div>
+              <p class="eyebrow">Black</p>
+              <strong id="blackName">Kasparian AI</strong>
+            </div>
+            <span id="blackClock">05:00</span>
+          </section>
+
+          <section class="compact-eval">
+            <div class="eval-label">
+              <strong>Position</strong>
+              <span id="evalText">Even</span>
+            </div>
+            <div class="eval-bar" aria-label="Evaluation bar">
+              <span id="evalFill"></span>
+            </div>
+            <p id="statusText">White to move. Select a piece.</p>
+          </section>
+
+          <section class="clock-card light-player" id="whiteClockCard">
+            <div>
+              <p class="eyebrow">White</p>
+              <strong id="whiteName">You</strong>
+            </div>
+            <span id="whiteClock">05:00</span>
+          </section>
+        </aside>
+
+        <section class="board-area">
+          <div class="board-toolbar">
+            <button id="flipButton" type="button">Flip Board</button>
+            <button id="hintButton" type="button">Hint</button>
+          </div>
+          <div class="board tournament-board" id="board" aria-label="Chess board"></div>
+        </section>
+
+        <aside class="notation-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Game Record</p>
+              <h2>Notation</h2>
+            </div>
+            <span id="moveCount">0 moves</span>
+          </div>
+
+          <ol id="notationList" class="notation-list"></ol>
+
+          <section class="ai-panel">
+            <p class="eyebrow">AI Insight</p>
+            <h3 id="bestMoveTitle">Waiting for your move</h3>
+            <p id="bestMoveText">The model-style evaluator will show a recommendation after the position changes.</p>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="vendor/chess-global.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
