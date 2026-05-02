@@ -355,7 +355,6 @@ h3 {
   background: rgba(169, 79, 61, 0.42);
 }
 
-/*
 .piece {
   position: relative;
   z-index: 1;
@@ -364,20 +363,6 @@ h3 {
   width: 82%;
   height: 82%;
   border-radius: 38% 38% 30% 30%;
-  font-size: 0.86em;
-  line-height: 1;
-  transform: translateY(-1%);
-  filter: drop-shadow(0 6px 4px rgba(24, 33, 45, 0.22));
-}*/
-
-.piece {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  width: 86%;
-  height: 86%;
-  border-radius: 50% 50% 35% 35%;
   font-size: 0.86em;
   line-height: 1;
   transform: translateY(-1%);
